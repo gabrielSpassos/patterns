@@ -1,3 +1,5 @@
+package br.com.gabrielspassos.orderprocesser.model;
+
 public class Order {
 
     private int id;

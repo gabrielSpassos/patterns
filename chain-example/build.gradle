@@ -1,4 +1,4 @@
-group 'chain-example'
+group 'br.com.gabrielspassos.orderprocesser.chain-example'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'

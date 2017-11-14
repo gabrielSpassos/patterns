@@ -1,6 +1,11 @@
-public class ManagerHandler extends IHandler {
+package br.com.gabrielspassos.orderprocesser.chain;
 
-    public ManagerHandler(IHandler next) {
+
+import br.com.gabrielspassos.orderprocesser.model.Order;
+
+public class ManagerHandler extends Handler {
+
+    public ManagerHandler(Handler next) {
         super(next);
     }
 

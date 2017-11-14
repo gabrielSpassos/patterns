@@ -1,6 +1,10 @@
-public class ChiefManager extends IHandler {
+package br.com.gabrielspassos.orderprocesser.chain;
 
-    public ChiefManager(IHandler next) {
+import br.com.gabrielspassos.orderprocesser.model.Order;
+
+public class ChiefHandler extends Handler {
+
+    public ChiefHandler(Handler next) {
         super(next);
     }
 

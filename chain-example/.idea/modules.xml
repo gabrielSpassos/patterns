@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/br.com.gabrielspassos.orderprocesser.chain-example.iml" filepath="$PROJECT_DIR$/.idea/modules/br.com.gabrielspassos.orderprocesser.chain-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/br.com.gabrielspassos.orderprocesser.chain-example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/br.com.gabrielspassos.orderprocesser.chain-example_main.iml" group="br.com.gabrielspassos.orderprocesser.chain-example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/br.com.gabrielspassos.orderprocesser.chain-example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/br.com.gabrielspassos.orderprocesser.chain-example_test.iml" group="br.com.gabrielspassos.orderprocesser.chain-example" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chain-example.iml" filepath="$PROJECT_DIR$/.idea/modules/chain-example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chain-example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/chain-example_main.iml" group="chain-example" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chain-example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/chain-example_test.iml" group="chain-example" />
     </modules>
   </component>
 </project>

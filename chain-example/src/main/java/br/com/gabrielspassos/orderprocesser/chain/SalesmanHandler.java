@@ -1,6 +1,10 @@
-public class SalesmanHandler extends IHandler {
+package br.com.gabrielspassos.orderprocesser.chain;
 
-    public SalesmanHandler(IHandler next) {
+import br.com.gabrielspassos.orderprocesser.model.Order;
+
+public class SalesmanHandler extends Handler {
+
+    public SalesmanHandler(Handler next) {
         super(next);
     }
 

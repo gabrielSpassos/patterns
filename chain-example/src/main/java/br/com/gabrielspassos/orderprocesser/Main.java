@@ -1,3 +1,9 @@
+package br.com.gabrielspassos.orderprocesser;
+
+import br.com.gabrielspassos.orderprocesser.chain.Handler;
+import br.com.gabrielspassos.orderprocesser.factory.ChainFactory;
+import br.com.gabrielspassos.orderprocesser.model.Order;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,14 +33,11 @@ public class Main {
         orderList.add(order5);
         orderList.add(order6);
 
-        ChiefManager chiefManager = new ChiefManager(null);
-        ManagerHandler managerHandler = new ManagerHandler(chiefManager);
-        SalesmanHandler salesmanHandler = new SalesmanHandler(managerHandler);
-
+        Handler chain = ChainFactory.createChain();
         for (Order order:
              orderList) {
             System.out.println("Product id: "+order.getId()+" Product final price: R$"+order.getPrice()
-                                +"\tOrigin role: "+order.getRole()+"\t\tWho handled: "+salesmanHandler.handle(order));
+                                +"\tOrigin role: "+order.getRole()+"\t\tWho handled: "+ chain.handle(order));
         }
 
     }
