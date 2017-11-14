@@ -5,6 +5,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*
+            Logic of roles:
+                - sales man (can approve sales until $300)
+                - manager (can approve sales greater than $300)
+                - chief (can approve sales greater than $1000)
+        */
+
         Order order1 = new Order(1,200,3,"manager");
         Order order2 = new Order(2, 500,5,"chief");
         Order order3 = new Order(3, 110,2,"salesman");
@@ -27,7 +34,7 @@ public class Main {
         for (Order order:
              orderList) {
             System.out.println("Product id: "+order.getId()+" Product final price: R$"+order.getPrice()
-                                +"\tWho handled: "+salesmanHandler.handle(order));
+                                +"\tOrigin role: "+order.getRole()+"\t\tWho handled: "+salesmanHandler.handle(order));
         }
 
     }
