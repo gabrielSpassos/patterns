@@ -10,21 +10,21 @@ public class SalesmanHandler extends Handler {
 
     @Override
     public String handle(Order order, String context) {
-        if(canHandlePrice(order)){
-            if (canHandleSupplier(order)){
-                context = "can handle this order";
-                return "Salesman " + context;
-            }
-            return context = "Salesman can't handle this order, because the supplier isn't normal";
-        }else{
-            context = "Salesman can't handle this order, because this order is over R$300";
+        if(cantHandlePrice(order)) {
             return getNext().handle(order, context);
         }
+
+        if (canHandleSupplier(order)){
+            context = "can handle this order";
+            return "Salesman " + context;
+        }
+        return context = "Salesman can't handle this order, because the supplier isn't normal";
+
     }
 
     @Override
-    public boolean canHandlePrice(Order order) {
-        return (order.getPrice() < 300);
+    public boolean cantHandlePrice(Order order) {
+        return !(order.getPrice() < 300);
 
     }
 

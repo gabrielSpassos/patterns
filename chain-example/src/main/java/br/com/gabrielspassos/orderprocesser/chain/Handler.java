@@ -16,7 +16,7 @@ public abstract class Handler {
         return next;
     }
 
-    protected abstract boolean canHandlePrice(Order order);
+    protected abstract boolean cantHandlePrice(Order order);
 
     protected abstract boolean canHandleSupplier(Order order);
 

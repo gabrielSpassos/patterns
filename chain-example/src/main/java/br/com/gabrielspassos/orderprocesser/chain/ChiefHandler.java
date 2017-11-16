@@ -10,21 +10,18 @@ public class ChiefHandler extends Handler {
 
     @Override
     public String handle(Order order, String context) {
-        if(canHandlePrice(order)){
-            if (canHandleSupplier(order)){
-                context = "can handle this order";
-                return "Chief " + context;
-            }
-            return context = "Cheif can't handle this order, because the supplier isn't special";
-        }else{
-            context = "Cheif can't handle this order, because this order is under than R$1000";
-            return context;
+
+        if (canHandleSupplier(order)){
+            context = "can handle this order";
+            return "Chief " + context;
         }
+
+        return context = "Cheif can't handle this order, because the supplier isn't special";
     }
 
     @Override
-    public boolean canHandlePrice(Order order) {
-        return (order.getPrice() >= 1000);
+    public boolean cantHandlePrice(Order order) {
+        return !(order.getPrice() >= 1000);
 
     }
 
