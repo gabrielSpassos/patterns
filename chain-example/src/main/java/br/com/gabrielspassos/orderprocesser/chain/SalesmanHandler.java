@@ -2,7 +2,6 @@ package br.com.gabrielspassos.orderprocesser.chain;
 
 import br.com.gabrielspassos.orderprocesser.model.Order;
 
-
 public class SalesmanHandler extends Handler {
 
     public SalesmanHandler(Handler next) {
