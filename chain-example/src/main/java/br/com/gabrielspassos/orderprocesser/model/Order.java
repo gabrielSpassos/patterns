@@ -5,24 +5,26 @@ public class Order {
     private int id;
     private int unityPrice;
     private int quantity;
-    private String role;
+    private Supplier supplier;
 
-    public Order(int id, int unityPrice, int quantity, String role) {
+
+    public Order(int id, int unityPrice, int quantity, Supplier supplier) {
         this.id = id;
         this.unityPrice = unityPrice;
         this.quantity = quantity;
-        this.role = role;
+        this.supplier = supplier;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getRole() {
-        return role;
+    public Supplier getSupplier() {
+        return supplier;
     }
-
     public int getPrice(){
         return this.unityPrice * this.quantity;
     }
+
+
 }
